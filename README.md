@@ -10,6 +10,11 @@
 
 ## Installation
 
+This tutorial is versioned for:
+
+* keycloak 25.0.4
+* mysql 8.4.2
+
 Keycloak uses a relational database to persist the information.  We'll need to start up a database.  Many are supported and this tutorial just simply uses MySQL as the datastorage.
 
 ## local
