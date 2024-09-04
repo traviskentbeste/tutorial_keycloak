@@ -33,7 +33,7 @@ curl -s \
 	-X POST \
 	-H "Authorization: Bearer $access_token" \
 	-H 'Content-Type: application/json' \
-	-d "@realm.json" \
+	-d "@../json/realm.json" \
 	http://$hostname/admin/realms | jq -r .
 echo " "
 

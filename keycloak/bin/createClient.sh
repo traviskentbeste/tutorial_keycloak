@@ -35,7 +35,7 @@ curl -s \
     -X "POST" \
     -H "Authorization: Bearer $access_token" \
     -H 'Content-Type: application/json' \
-    -d "@client-${client}.json" \
+    -d "@../json/client-${client}.json" \
     http://$hostname/admin/realms/$realm/clients | jq -r .
 echo " "
 

@@ -35,7 +35,7 @@ curl -s \
     -X POST \
     -H "Content-Type: application/json" \
     -H "Authorization: bearer $access_token" \
-    -d "@role-$role.json" \
+    -d "@../json/role-$role.json" \
     http://$hostname/admin/realms/$realm/roles | jq .
 echo " "
 

@@ -20,7 +20,7 @@ echo " "
 # get the user
 #--------------------#
 echo "get the user '$user'..."
-email=`cat user-$user.json | jq -r .email`
+email=`cat ../json/user-$user.json | jq -r .email`
 userId=`curl -s -X GET -H "Content-Type: application/json" -H "Authorization: bearer $access_token" http://$hostname/admin/realms/$realm/users?email=$email | jq -r .[0].id`
 if [ $userId == "null" ]; then
     userId=""
@@ -36,7 +36,6 @@ if [ ! -z $userId ]; then
         -X DELETE \
         -H "Content-Type: application/json" \
         -H "Authorization: bearer $access_token" \
-        -d "@user-$user.json" \
         http://$hostname/admin/realms/$realm/users/$userId | jq .
     echo " "
 fi
@@ -49,14 +48,14 @@ curl -s \
     -X POST \
     -H "Content-Type: application/json" \
     -H "Authorization: bearer $access_token" \
-    -d "@user-$user.json" \
+    -d "@../json/user-$user.json" \
     http://$hostname/admin/realms/$realm/users | jq .
 echo " "
 
 #--------------------#
 # get the user
 #--------------------#
-email=`cat user-$user.json | jq -r .email`
+email=`cat ../json/user-$user.json | jq -r .email`
 userId=`curl -s -X GET -H "Content-Type: application/json" -H "Authorization: bearer $access_token" http://$hostname/admin/realms/$realm/users?email=$email | jq -r .[0].id`
 echo " "
 
@@ -86,6 +85,6 @@ fi
 #--------------------#
 # get the user
 #--------------------#
-email=`cat user-$user.json | jq -r .email`
+email=`cat ../json/user-$user.json | jq -r .email`
 curl -s -X GET -H "Content-Type: application/json" -H "Authorization: bearer $access_token" http://$hostname/admin/realms/$realm/users?email=$email | jq -r .[0]
 echo " "
