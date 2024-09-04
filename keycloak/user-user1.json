@@ -1,0 +1,16 @@
+{
+        "firstName": "user1Firstname",
+        "lastName": "user1Lastname",
+        "email": "user1@example.com",
+        "emailVerified": "true",
+        "enabled": "true",
+        "credentials":
+        [
+                {
+                        "userLabel": "password",
+                        "type": "password",
+                        "value": "user1",
+                        "temporary": "false"
+                }
+        ]
+}

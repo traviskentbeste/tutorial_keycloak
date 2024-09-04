@@ -1,0 +1,7 @@
+{
+	"id": "backend",
+	"description": "spring boot backend api",
+	"redirectUris": ["http://localhost:8090/*", "http://localhost:8090"],
+	"directAccessGrantsEnabled": true,
+	"publicClient": true
+}

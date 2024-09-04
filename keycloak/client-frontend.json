@@ -1,0 +1,9 @@
+{
+	"id": "frontend",
+	"description": "angular frontend ui",
+	"redirectUris": ["http://localhost:4200/*", "http://localhost:4200"],
+	"webOrigins": ["*"],
+	"directAccessGrantsEnabled": true,
+	"publicClient": true,
+	"implicitFlowEnabled": true
+}

@@ -33,7 +33,7 @@ docker run \
     -p 3306:3306 \
     --name local_mysql \
     -e MYSQL_ROOT_PASSWORD=mysql \
-    -v ./local_mysql:/var/lib/mysql \
+    -v ./.local_mysql:/var/lib/mysql \
     -d \
     --net knetwork \
     mysql:8.4.2 \
@@ -64,6 +64,12 @@ mysql -u root -pmysql mysql
 
 ### keycloak installation
 
+First we need to configure mysql with a keycloak database.  Run the following command to create our username/password and database
+
+```
+./keycloakDatabaseSetup.sh install
+```
+
 To start up keycloak we'll use a mysql tuned version.  We will name the image 'local_keycloak' and give it a version of 0.0.1  We can reference that in the docker run command below
 
 ```
@@ -82,3 +88,5 @@ docker run --name local_keycloak --net knetwork -p 8443:8443 -p 9000:9000 -e KEY
 
 Docker will now look like this:
 ![screenshot](images/docker-3.png)
+
+## Configuration

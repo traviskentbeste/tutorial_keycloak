@@ -1,0 +1,14 @@
+{
+	"id": "test-app",
+	"realm": "test-app",
+	"displayName": "test-app",
+	"enabled": true,
+	"registrationAllowed": false,
+	"loginWithEmailAllowed": true,
+	"rememberMe": true,
+	"registrationEmailAsUsername": true,
+	"duplicateEmailsAllowed": false,
+	"resetPasswordAllowed": true,
+	"editUsernameAllowed": false,
+	"bruteForceProtected": true
+}
